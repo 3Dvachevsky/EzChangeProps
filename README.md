@@ -9,3 +9,7 @@ Plugin for Godot
 - Go to [Releases](https://github.com/3Dvachevsky/EzChangeProps/releases) and download the latest version.
 - Add the downloaded folder `ez_change_props` to the addons
 - `Project -> Project Settings -> Plugin -> EZ Change Props -> Status -> Enable`
+
+## Shortcuts
+- `Shift` + `MMB WHELL UP`
+- `Shift` + `MMB WHELL DOWN`
