@@ -1,0 +1,3 @@
+# EzChangeProps
+
+Plugin for Godot
