@@ -9,11 +9,15 @@ func _handles(object):
 		return true
 	return false
 
-func _forward_3d_gui_input(camera, event):
-	if event.is_pressed() and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_WHEEL_UP and Input.is_key_pressed(KEY_SHIFT):
-		_change(+1)
-	if event.is_pressed() and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_WHEEL_DOWN and Input.is_key_pressed(KEY_SHIFT):
-		_change(-1)
+func _forward_3d_gui_input(camera, event) -> int:
+	if Input.is_key_pressed(KEY_ALT):
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_UP) or Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_DOWN):
+			if event.is_pressed() and event.button_index == MOUSE_BUTTON_WHEEL_UP:
+				_change(+1)
+			if event.is_pressed() and event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+				_change(-1)
+		return 1
+	return 0
 
 func _change(value):
 	var scenes : Array[PackedScene] = _get_all_scenes()
@@ -41,7 +45,7 @@ func _change(value):
 	new_node.set_owner(selected_node.get_owner())
 	new_node.transform = transform_node
 	new_node.set_name(node_name)
-	selected_node.queue_free()
+	selected_node.free()
 	
 	EditorInterface.get_selection().clear()
 	EditorInterface.get_selection().add_node(new_node)

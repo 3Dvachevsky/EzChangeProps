@@ -1,15 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba7rebtoxfegx"]
+[gd_scene load_steps=3 format=3 uid="uid://ba7rebtoxfegx"]
 
 [ext_resource type="PackedScene" uid="uid://dvtdwiyn0jcc7" path="res://example/scenes/scene_01.tscn" id="1_m8i8c"]
 [ext_resource type="PackedScene" uid="uid://wqgrahscok23" path="res://example/scenes/scene_03.tscn" id="2_03emx"]
-[ext_resource type="PackedScene" uid="uid://bfivelscm5slt" path="res://example/scenes/scene_02.tscn" id="2_ok74a"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="scene_01" parent="." instance=ExtResource("1_m8i8c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+[node name="scene_02" type="Node3D" parent="." instance=ExtResource("1_m8i8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.640757, -0.692528, 0)
 
-[node name="scene_03" parent="." instance=ExtResource("2_03emx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+[node name="scene_03" type="Node3D" parent="." instance=ExtResource("1_m8i8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.565507, -0.692528, 0)
 
-[node name="scene_02" parent="." instance=ExtResource("2_ok74a")]
+[node name="scene_01" type="Node3D" parent="." instance=ExtResource("2_03emx")]
+
+[node name="scene_07" type="Node3D" parent="." instance=ExtResource("1_m8i8c")]
+transform = Transform3D(1.16693, 0, 0, 0, 1.16693, 0, 0, 0, 1.16693, -0.000165045, 1.26405, -0.0010848)
+
+[node name="scene_04" type="Node3D" parent="." instance=ExtResource("1_m8i8c")]
+transform = Transform3D(0.408366, 0, 0, 0, 0.408366, 0, 0, 0, 0.408366, -0.522045, 3.6751, -0.312489)
+
+[node name="scene_06" type="Node3D" parent="." instance=ExtResource("1_m8i8c")]
+transform = Transform3D(0.541538, 0, 0, 0, 0.541538, 0, 0, 0, 0.541538, 0.337557, 2.97286, -0.305937)
+
+[node name="scene_08" parent="." instance=ExtResource("1_m8i8c")]
+transform = Transform3D(0.541538, 0, 0, 0, 0.541538, 0, 0, 0, 0.541538, -0.0169066, 2.28537, -0.305937)
+
+[node name="scene_09" parent="." instance=ExtResource("1_m8i8c")]
+transform = Transform3D(0.541538, 0, 0, 0, 0.541538, 0, 0, 0, 0.541538, -0.295062, 3.05365, -0.305937)
+
+[node name="scene_10" parent="." instance=ExtResource("1_m8i8c")]
+transform = Transform3D(0.541538, 0, 0, 0, 0.541538, 0, 0, 0, 0.541538, 0.482663, 3.95981, -0.305937)
