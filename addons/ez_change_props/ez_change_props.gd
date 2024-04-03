@@ -2,6 +2,20 @@
 extends EditorPlugin
 
 var selected_node : Node3D
+var viewport
+
+func _enable_plugin() -> void:
+	EditorInterface.get_editor_viewport_3d().get_parent().get_parent().get_child(1).gui_input.connect(on_gui_input)
+
+func on_gui_input(event: InputEvent):
+		if event.is_pressed() and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_WHEEL_UP and Input.is_key_pressed(KEY_SHIFT):
+			_change(+1)
+		if event.is_pressed() and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_WHEEL_DOWN and Input.is_key_pressed(KEY_SHIFT):
+			_change(-1)
+
+func _disable_plugin() -> void:
+	EditorInterface.get_editor_viewport_3d().get_parent().get_parent().get_child(1).gui_input.disconnect(on_gui_input)
+
 
 func _handles(object):
 	if object is Node3D:
@@ -9,11 +23,6 @@ func _handles(object):
 		return true
 	return false
 
-func _forward_3d_gui_input(camera, event):
-	if event.is_pressed() and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_WHEEL_UP and Input.is_key_pressed(KEY_SHIFT):
-		_change(+1)
-	if event.is_pressed() and event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_WHEEL_DOWN and Input.is_key_pressed(KEY_SHIFT):
-		_change(-1)
 
 func _change(value):
 	var scenes : Array[PackedScene] = _get_all_scenes()
