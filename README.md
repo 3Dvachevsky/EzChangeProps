@@ -15,5 +15,5 @@ https://github.com/user-attachments/assets/1f213f04-8dad-473a-b5a3-4cb42d8a5701
 - `Project -> Project Settings -> Plugin -> EZ Change Props -> Status -> Enable`
 
 ## Shortcuts
-- `Shift` + `MMB WHELL UP`
-- `Shift` + `MMB WHELL DOWN`
+- `Alt` + `MMB WHELL UP`
+- `Alt` + `MMB WHELL DOWN`
