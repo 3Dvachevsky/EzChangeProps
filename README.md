@@ -2,7 +2,11 @@
 
 Easy and fast scene switching
 
-![Godot_v4 2-stable_mono_win64_toQJUl8mXD](https://github.com/3Dvachevsky/EzChangeProps/assets/23451556/25cfd0f8-141a-4cb5-8528-a778ec3a05a0)
+
+
+https://github.com/user-attachments/assets/1f213f04-8dad-473a-b5a3-4cb42d8a5701
+
+
 
 ## Installation
 
@@ -11,5 +15,5 @@ Easy and fast scene switching
 - `Project -> Project Settings -> Plugin -> EZ Change Props -> Status -> Enable`
 
 ## Shortcuts
-- `Shift` + `MMB WHELL UP`
-- `Shift` + `MMB WHELL DOWN`
+- `Alt` + `MMB WHELL UP`
+- `Alt` + `MMB WHELL DOWN`
